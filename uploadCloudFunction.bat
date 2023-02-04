@@ -1,0 +1,1 @@
+"D:\tools\wechatdev\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-6gkvqfhf8a3ebfc1 --n quickstartFunctions --r --project "D:\code\2023\Teyvat" --report_first --report
