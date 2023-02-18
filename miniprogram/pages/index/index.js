@@ -6,8 +6,12 @@ Page({
   data: {
     showUploadTip: false,
     powerList: [{
-      title: '武器天赋材料',
-      tip: '武器突破/天赋升级',
+      title: '天赋材料',
+      tip: '天赋升级材料',
+      page: ""
+    }, {
+      title: '武器材料',
+      tip: '武器突破材料',
       page: ""
     }, {
       title: '周本材料',
