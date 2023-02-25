@@ -6,9 +6,9 @@ Page({
   data: {
     showUploadTip: false,
     powerList: [{
-      title: '天赋材料',
-      tip: '天赋升级材料',
-      page: ""
+      title: '角色材料',
+      tip: '角色天赋升级材料',
+      page: "talent"
     }, {
       title: '武器材料',
       tip: '武器突破材料',
@@ -26,48 +26,13 @@ Page({
   },
 
   onClickPowerInfo(e) {
-    const index = e.currentTarget.dataset.index;
-    const powerList = this.data.powerList;
-    powerList[index].showItem = !powerList[index].showItem;
-    if (powerList[index].title === '数据库' && !this.data.haveCreateCollection) {
-      this.onClickDatabase(powerList);
-    } else {
-      this.setData({
-        powerList
-      });
-    }
+    this.jumpPage(this.data.powerList[e.currentTarget.dataset.index]['page'])
   },
 
-  onChangeShowEnvChoose() {
-    wx.showActionSheet({
-      itemList: this.data.envList.map(i => i.alias),
-      success: (res) => {
-        this.onChangeSelectedEnv(res.tapIndex);
-      },
-      fail (res) {
-        console.log(res.errMsg);
-      }
-    });
-  },
 
-  onChangeSelectedEnv(index) {
-    if (this.data.selectedEnv.envId === this.data.envList[index].envId) {
-      return;
-    }
-    const powerList = this.data.powerList;
-    powerList.forEach(i => {
-      i.showItem = false;
-    });
-    this.setData({
-      selectedEnv: this.data.envList[index],
-      powerList,
-      haveCreateCollection: false
-    });
-  },
-
-  jumpPage(e) {
+  jumpPage(page) {
     wx.navigateTo({
-      url: `/pages/${e.currentTarget.dataset.page}/index?envId=${this.data.selectedEnv.envId}`,
+      url: `/pages/${page}/index`,
     });
   },
 

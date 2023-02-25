@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabs": "/components/tabs/tabs",
+    "tab-page": "/components/tab-page/tab-page"
+  },
+  "navigationBarTitleText": "角色天赋升级材料"
+}
