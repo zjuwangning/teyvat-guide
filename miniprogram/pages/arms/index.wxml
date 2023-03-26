@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <tabs list="{{tabs}}" tab-class="tab-class" showBadge="{{true}}" swiper="{{true}}" activeColor="#FF0000" normalColor="#888888" bindchange="tabChange">
+    <tab-page slot="周一/四">
+      <view class="tab-body">
+        <view class="title-row">
+          <view class="title">
+            璃月 - 「自由」
+          </view>
+          <image src="../../images/talent/ziyou-3.png" alt="" class="title-image"/>
+          <image src="../../images/talent/ziyou-2.png" alt="" class="title-image"/>
+          <image src="../../images/talent/ziyou-1.png" alt="" class="title-image"/>
+        </view>
+        <view class="character-r">
+          
+        </view>
+      </view>
+    </tab-page>
+    <tab-page slot="周二/五">
+      <view style="height: 100%">222</view>
+    </tab-page>
+    <tab-page slot="周三/六">
+      <view style="height: 100%">333</view>
+    </tab-page>
+  </tabs>
+</view>
